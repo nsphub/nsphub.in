@@ -1,0 +1,6 @@
+@import url('./reset.css');
+
+body {
+    background-color: #F6EFFE;
+    font-family: Consolas, Arial, Helvetica, sans-serif;
+}

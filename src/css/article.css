@@ -1,0 +1,27 @@
+.page {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    text-align : left;
+    color: #004f3f;
+    background-color: #00000;
+    margin-left: 5px;
+    margin-right: 5px;
+    justify-content: space-between;
+    align-items: left;
+}
+
+
+.article {
+    text-align: left;
+    margin-bottom: 5px;
+    barckground-color: #f2f2f2;
+    font-family: consolas;
+    font-size: 14px;
+    color: #0f0f0f;
+}
+
+.article-title {
+    font-size: 22px;
+    color: black;
+}

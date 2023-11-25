@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head> 
-        {% include "basehead.html" %}
-        {% block head%}
-        {% endblock %}
-    </head>
-    <body>
-        <h1 align="center"><a href="/">nsphub</a></h1>
-        {{content | safe}}
-    
-    </body>
+
+<head>
+ {% include "basehead.html" %}
+ {% block head%}
+ {% endblock %}
+</head>
+
+<body>
+ <div class="topnav">
+  <ul>
+   <li><a href="/about">About</a></li>
+   <li><a href="/contact">Contact</a></li>
+   <li><a href="/article">Article</a></li>
+   <li><a href="/">Home</a></li>
+   <li class="logo"> nsphub</li>
+  </ul>
+ </div>
+ {{content | safe}}
+</body>
+
 </html>
