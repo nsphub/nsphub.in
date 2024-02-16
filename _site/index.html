@@ -20,10 +20,10 @@
 
 <body>
 
- 
+  <div class="navbar-fixed">
   <nav>
     <div class="nav-wrapper">
-      <a href="#!" class="brand-logo">nsphub</a>
+      <a href="/" class="brand-logo"><div class="nsphub-logo">nsphub</div></a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
 
@@ -34,6 +34,7 @@
       </ul>
     </div>
   </nav>
+</div>
 
   <ul class="sidenav" id="mobile-demo">
 
@@ -46,35 +47,106 @@
  <br />
 <div class="container">
  <div class="row">
-  <h4>Interesting projects and stuff</h4>
+  <h4>Projects</h4>
   <div class="card">
-   <div class="card-title">Lignum</div>
+   <div class="card-title" style="margin-left: 10px;">
+    Lignum
+   </div>
+   <hr />
+   <div class="card-image" style="align-self: center;">
+    <img style="width: 450px; height: 300px; margin-left: 20%;" src="assets/images/lignum_draw.jpeg">
+   </div>
    <div class="card-content">
     <p>
-     Distributed message queue built using Golang. Uses consul for distributed leader election.
+     Distributed message queue built using Golang something like Kafka. Uses consul for distributed leader election.
+     <br />
+     Runs in a single node or cluster mode, with abilty to replication, message persistancy and exposes REST and gRPC endpoints to publish and consume messages.
     </p>
-    <a href="https://github.com/NishanthSpShetty/lignum">Repo</a>
     <br />
-    <a href="ihttps://medium.com/dev-genius/lignum-distributed-message-queue-403d38548dbe">Intro article</a>
+    Language: Golang
+    <br />
+    <a href="https://github.com/NishanthSpShetty/lignum">Repository</a>
+    <br />
+    <a href="ihttps://medium.com/dev-genius/lignum-distributed-message-queue-403d38548dbe">Introductory article to Lignum</a>
    </div>
   </div>
   <div class="card">
-   <div class="card-title">
+   <div class="card-title" style="margin-left: 10px;">
     Crust
    </div>
+   <hr />
    <div class="card-content">
     <p>
      C/C++ to Rust transpiler written in Rust
     </p>
-    <a href="https://github.com/NishanthSpShetty/crust">Repo</a>
+    <br />
+    Language: Rust
+    <br />
+    <a href="https://github.com/NishanthSpShetty/crust">Repository</a>
    </div>
   </div>
   <div class="card">
-   <div class="card-title">
+   <div class="card-title" style="margin-left: 20px;">
     <p>Genesis</p>
+   </div>
+   <hr />
+   <div class="card-content">
+    <p>
+     An attempt to learn and build OS kernel
+    </p>
+    <br />
+    Language: C, Assembly
+    <br />
+    <a href="https://github.com/NishanthSpShetty/genesis">Repository</a>
+   </div>
+  </div>
+  <div class="card">
+   <div class="card-title" style="margin-left: 20px;">
+    <p>StackVM</p>
+   </div>
+   <hr />
+   <div class="card-content">
+    <p>
+     Stack based virtual machine, something like JVM
+    </p>
+    <br />
+    Language: Rust
+    <br />
+    <a href="https://github.com/NishanthSpShetty/Stack-VM">Repository</a>
+   </div>
+  </div>
+  <div class="card">
+   <div class="card-title" style="margin-left: 20px;">
+    <p>gRPC interceptors</p>
+   </div>
+   <hr />
+   <div class="card-content">
+    <p>
+     Middleware library to be used in Go gRPC application for logging, tracing RPC requests. Users can add there own functionality.
+    </p>
+    <br />
+    Language: Golang
+    <br />
+    <a href="https://github.com/NishanthSpShetty/grpc-interceptors">Repository</a>
+   </div>
+  </div>
+  <div class="card">
+   <div class="card-title" style="margin-left: 20px;">
+    <p>gmod</p>
+   </div>
+   <hr />
+   <div class="card-content">
+    <p>
+     Tool to quickly setup Golang project with module initialized.
+    </p>
+    <br />
+    Language: Rust
+    <br />
+    <a href="https://github.com/NishanthSpShetty/gmod">Repository</a>
    </div>
   </div>
  </div>
+</div>
 </div>
 </body>
 
