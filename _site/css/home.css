@@ -1,55 +1,248 @@
-img {
-    border-radius: 60%;
-    height: 300px;
-    width: 300px;
+/* Project images */
+.card-image img {
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
 }
 
-.topnav {
-    overflow: hidden;
-    background-color:  #e6ffe6;
-
+/* Navigation improvements */
+.navbar-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 }
 
-.nav {
+nav {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
+    box-shadow: var(--shadow-md);
+    height: 64px;
+    line-height: 64px;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.nav-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    height: 64px;
 }
 
-.nsphub-logo{
-
-  margin-left: 10px;
-}
-.logo {
-  float: left;
-  color: #660033;
-  text-align: center;
-  padding: 16px 16px;
-  text-decoration: none;
-  font-size: 19px;
-  background-color: #b3ffb3;
-  border-radius: 40%;
-  margin-left: 20px;
+.brand-logo {
+    color: white !important;
+    transition: var(--transition);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 64px;
+    line-height: 64px;
+    display: inline-flex;
+    align-items: center;
 }
 
-.topnav a {
-  float: right;
-  color: #1a001a;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+.nsphub-logo {
+    color: white !important;
+    display: inline-block;
 }
 
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
+.brand-logo:hover {
+    opacity: 0.9;
 }
 
-.topnav a.active {
-  background-color: red;
-  color: white;
+nav ul {
+    height: 64px;
+}
+
+nav ul li {
+    height: 64px;
+}
+
+nav ul a {
+    color: rgba(255, 255, 255, 0.95) !important;
+    font-weight: 500;
+    transition: var(--transition);
+    position: relative;
+    height: 64px;
+    line-height: 64px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+nav ul a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background: white;
+    transition: var(--transition);
+}
+
+nav ul a:hover {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    color: white !important;
+}
+
+nav ul a:hover::after {
+    width: 70%;
+}
+
+/* Mobile navigation */
+.sidenav {
+    background: var(--surface);
+    box-shadow: var(--shadow-xl);
+}
+
+.sidenav li > a {
+    color: var(--text-primary) !important;
+    font-weight: 500;
+    padding: 1rem 2rem;
+    transition: var(--transition);
+}
+
+.sidenav li > a:hover {
+    background-color: var(--primary-light) !important;
+    color: white !important;
+}
+
+/* Add spacing for fixed navbar */
+body {
+    padding-top: 64px;
+}
+
+/* Project cards specific styling */
+.card-content .language-tag {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary-light), var(--secondary-color));
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
+
+/* Improve link spacing in cards */
+.card-content a {
+    display: inline-block;
+    margin: 0.5rem 0;
+    padding: 0.5rem 1rem;
+    background: var(--background);
+    border-radius: 6px;
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+}
+
+.card-content a:hover {
+    background: var(--primary-color);
+    color: white !important;
+    border-color: var(--primary-color);
+    text-decoration: none;
+    transform: translateX(4px);
+}
+
+/* Responsive improvements for home page */
+@media (max-width: 992px) {
+    .nav-wrapper {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .card-image img {
+        max-width: 100%;
+    }
+    
+    .language-tag {
+        font-size: 0.8rem !important;
+        padding: 0.2rem 0.6rem !important;
+        margin: 0.25rem 0.25rem 0.25rem 0 !important;
+    }
+    
+    .card-content a {
+        padding: 0.4rem 0.8rem !important;
+        font-size: 0.9rem;
+        margin: 0.4rem 0.4rem 0.4rem 0 !important;
+        display: inline-flex;
+    }
+    
+    .card-content a i {
+        font-size: 1rem !important;
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        height: 56px;
+        line-height: 56px;
+    }
+    
+    .nav-wrapper {
+        height: 56px;
+        padding: 0 0.5rem;
+    }
+    
+    .brand-logo {
+        font-size: 1.3rem !important;
+        height: 56px;
+        line-height: 56px;
+    }
+    
+    nav ul {
+        height: 56px;
+    }
+    
+    nav ul li {
+        height: 56px;
+    }
+    
+    nav ul a {
+        height: 56px;
+        line-height: 56px;
+        padding: 0 15px;
+    }
+    
+    body {
+        padding-top: 56px;
+    }
+}
+
+/* Accessibility improvements */
+.card:focus-within {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+a:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Loading animation for images */
+.card-image img {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Improve language tags display */
+.card-content .language-tag {
+    margin-right: 0.5rem;
 }

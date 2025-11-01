@@ -15,25 +15,61 @@
       <a href="/" class="brand-logo"><div class="nsphub-logo">nsphub</div></a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-
-    <li><a href="/">Home</a></li>
-    <li><a href="/article">Article</a></li>
-    <li><a href="/contact">Contact</a></li>
-    <li><a href="/about">About</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/article">Articles</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/about">About</a></li>
       </ul>
     </div>
   </nav>
 </div>
 
   <ul class="sidenav" id="mobile-demo">
-
     <li><a href="/">Home</a></li>
-    <li><a href="/article">Article</a></li>
+    <li><a href="/article">Articles</a></li>
     <li><a href="/contact">Contact</a></li>
     <li><a href="/about">About</a></li>
   </ul>
 
- {{content | safe}}
+ <main>
+  {{content | safe}}
+ </main>
+
+ <footer class="page-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5>nsphub</h5>
+        <p class="footer-description">
+          Software engineer passionate about systems programming, distributed systems, and building robust applications.
+        </p>
+      </div>
+      <div class="col l4 offset-l2 s12">
+        <h5>Connect</h5>
+        <ul class="footer-links">
+          <li><a href="https://github.com/NishanthSpShetty" target="_blank" rel="noopener noreferrer">
+            <i class="material-icons">code</i> GitHub
+          </a></li>
+          <li><a href="https://www.linkedin.com/in/nishanthspshetty/" target="_blank" rel="noopener noreferrer">
+            <i class="material-icons">work</i> LinkedIn
+          </a></li>
+          <li><a href="https://medium.com/@nishanthspshetty" target="_blank" rel="noopener noreferrer">
+            <i class="material-icons">article</i> Medium
+          </a></li>
+          <li><a href="mailto:nishanthspshetty@gmail.com">
+            <i class="material-icons">email</i> Email
+          </a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      © 2024 nsphub. Built with <a href="https://www.11ty.dev/" target="_blank" rel="noopener noreferrer">Eleventy</a>
+    </div>
+  </div>
+ </footer>
+
 </body>
 
 </html>

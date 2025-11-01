@@ -2,19 +2,34 @@
 <html lang="en">
 
 <head>
-  <title>nshub/contacts</title>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <title>nsphub/contact</title>
+ <meta name="description" content="Get in touch with me">
+ <meta name="author" content="Nishanth Shetty">
+ 
+ <!-- Open Graph / Social Media -->
+ <meta property="og:type" content="website">
+ <meta property="og:title" content="nsphub/contact">
+ <meta property="og:description" content="Get in touch with me">
+ 
+ <!-- Stylesheets -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
  <link rel="stylesheet" href="/css/global.css" />
+ <link rel="stylesheet" href="/css/home.css" />
+ <link rel="stylesheet" href="/css/contact.css" />
+ <link rel="stylesheet" href="/css/about.css" />
+ <link rel="stylesheet" href="/css/article.css" />
+ 
+ <!-- Scripts -->
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
- <link rel="stylesheet" href="/css/home.css" />
- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
- <script src="/scripts/nav.js"> </script>
+ <script src="/scripts/nav.js"></script>
 
  
-<meta name="description" content="this is how you can reach out to me">
+<meta name="description" content="Get in touch with me">
 <link rel="stylesheet" type="" href="/css/contact.css">
 
 </head>
@@ -27,42 +42,92 @@
       <a href="/" class="brand-logo"><div class="nsphub-logo">nsphub</div></a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-
-    <li><a href="/">Home</a></li>
-    <li><a href="/article">Article</a></li>
-    <li><a href="/contact">Contact</a></li>
-    <li><a href="/about">About</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/article">Articles</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/about">About</a></li>
       </ul>
     </div>
   </nav>
 </div>
 
   <ul class="sidenav" id="mobile-demo">
-
     <li><a href="/">Home</a></li>
-    <li><a href="/article">Article</a></li>
+    <li><a href="/article">Articles</a></li>
     <li><a href="/contact">Contact</a></li>
     <li><a href="/about">About</a></li>
   </ul>
 
- <div class="container">
+ <main>
+  <div class="container">
  <div class="row">
-  <div class="card">
-   <div class="card-title" style="margin-left: 10px;">
+  <h4>Get in Touch</h4>
+  <div class="card contact-card">
+   <div class="card-title">
     Nishanth Shetty
    </div>
-   <div class="card-content small contact_mail">
-    <a href="mailto:nishanthspshetty@gmail.com">nishanthspshetty@gmail.com</a>
-    <br />
-    <a href="https://www.linkedin.com/in/nishanthspshetty/"> LinkedIn </a>
-    <br />
-    <a href="https://github.com/NishanthSpShetty"> Github </a>
-    <br />
-    <a href="https://medium.com/@nishanthspshetty"> Medium blog</a>
+   <hr />
+   <div class="card-content">
+    <p>Feel free to reach out for collaborations, questions, or just to say hello!</p>
+    <div class="contact-links">
+     <a href="mailto:nishanthspshetty@gmail.com" class="contact-link">
+      <i class="material-icons">email</i>
+      <span>nishanthspshetty@gmail.com</span>
+     </a>
+     <a href="https://www.linkedin.com/in/nishanthspshetty" target="_blank" rel="noopener noreferrer" class="contact-link">
+      <i class="material-icons">work</i>
+      <span>LinkedIn Profile</span>
+     </a>
+     <a href="https://github.com/NishanthSpShetty" target="_blank" rel="noopener noreferrer" class="contact-link">
+      <i class="material-icons">code</i>
+      <span>GitHub Profile</span>
+     </a>
+     <a href="https://medium.com/@nishanthspshetty" target="_blank" rel="noopener noreferrer" class="contact-link">
+      <i class="material-icons">article</i>
+      <span>Medium Blog</span>
+     </a>
+    </div>
    </div>
   </div>
  </div>
 </div>
+ </main>
+
+ <footer class="page-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5>nsphub</h5>
+        <p class="footer-description">
+          Software engineer passionate about systems programming, distributed systems, and building robust applications.
+        </p>
+      </div>
+      <div class="col l4 offset-l2 s12">
+        <h5>Connect</h5>
+        <ul class="footer-links">
+          <li><a href="https://github.com/NishanthSpShetty" target="_blank" rel="noopener noreferrer">
+            <i class="material-icons">code</i> GitHub
+          </a></li>
+          <li><a href="https://www.linkedin.com/in/nishanthspshetty/" target="_blank" rel="noopener noreferrer">
+            <i class="material-icons">work</i> LinkedIn
+          </a></li>
+          <li><a href="https://medium.com/@nishanthspshetty" target="_blank" rel="noopener noreferrer">
+            <i class="material-icons">article</i> Medium
+          </a></li>
+          <li><a href="mailto:nishanthspshetty@gmail.com">
+            <i class="material-icons">email</i> Email
+          </a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      © 2024 nsphub. Built with <a href="https://www.11ty.dev/" target="_blank" rel="noopener noreferrer">Eleventy</a>
+    </div>
+  </div>
+ </footer>
+
 </body>
 
 </html>

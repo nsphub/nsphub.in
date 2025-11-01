@@ -2,109 +2,120 @@
 layout: layouts/home.html
 title: nshub
 ---
-<br />
 <div class="container">
  <div class="row">
   <h4>Projects</h4>
   <div class="card">
-   <div class="card-title" style="margin-left: 10px;">
+   <div class="card-title">
     Lignum
    </div>
    <hr />
    <div class="card-image">
     <div class="container">
-     <img style="width: 100%; max-width: 600px; height: auto;" src="assets/images/lignum_draw.jpeg">
+     <img src="assets/images/lignum_draw.jpeg" alt="Lignum distributed message queue architecture diagram">
     </div>
    </div>
    <div class="card-content">
     <p>
-     Distributed message queue built using Golang something like Kafka. Uses consul for distributed leader election.
-     <br />
-     Runs in a single node or cluster mode, with abilty to replication, message persistancy and exposes REST and gRPC endpoints to publish and consume messages.
+     Distributed message queue built using Golang, similar to Kafka. Uses Consul for distributed leader election.
+     Runs in single node or cluster mode, with ability to replicate, persist messages, and exposes REST and gRPC endpoints to publish and consume messages.
     </p>
-    <br />
-    Language: Golang
-    <br />
-    <a href="https://github.com/NishanthSpShetty/lignum">Repository</a>
-    <br />
-    <a href="ihttps://medium.com/dev-genius/lignum-distributed-message-queue-403d38548dbe">Introductory article to Lignum</a>
+    <span class="language-tag">Golang</span>
+    <div style="margin-top: 1rem;">
+     <a href="https://github.com/NishanthSpShetty/lignum" target="_blank" rel="noopener noreferrer">
+      <i class="material-icons" style="vertical-align: middle; font-size: 1.2rem;">code</i> View Repository
+     </a>
+     <a href="https://medium.com/dev-genius/lignum-distributed-message-queue-403d38548dbe" target="_blank" rel="noopener noreferrer">
+      <i class="material-icons" style="vertical-align: middle; font-size: 1.2rem;">article</i> Read Article
+     </a>
+    </div>
    </div>
   </div>
   <div class="card">
-   <div class="card-title" style="margin-left: 10px;">
+   <div class="card-title">
     Crust
    </div>
    <hr />
    <div class="card-content">
     <p>
-     C/C++ to Rust transpiler written in Rust
+     C/C++ to Rust transpiler written in Rust. Converts C and C++ code into idiomatic Rust code.
     </p>
-    <br />
-    Language: Rust
-    <br />
-    <a href="https://github.com/NishanthSpShetty/crust">Repository</a>
+    <span class="language-tag">Rust</span>
+    <div style="margin-top: 1rem;">
+     <a href="https://github.com/NishanthSpShetty/crust" target="_blank" rel="noopener noreferrer">
+      <i class="material-icons" style="vertical-align: middle; font-size: 1.2rem;">code</i> View Repository
+     </a>
+    </div>
    </div>
   </div>
   <div class="card">
-   <div class="card-title" style="margin-left: 20px;">
-    <p>Genesis</p>
+   <div class="card-title">
+    Genesis
    </div>
    <hr />
    <div class="card-content">
     <p>
-     An attempt to learn and build OS kernel
+     An educational project to learn and build an operating system kernel from scratch.
     </p>
-    <br />
-    Language: C, Assembly
-    <br />
-    <a href="https://github.com/NishanthSpShetty/genesis">Repository</a>
+    <span class="language-tag">C</span>
+    <span class="language-tag">Assembly</span>
+    <div style="margin-top: 1rem;">
+     <a href="https://github.com/NishanthSpShetty/genesis" target="_blank" rel="noopener noreferrer">
+      <i class="material-icons" style="vertical-align: middle; font-size: 1.2rem;">code</i> View Repository
+     </a>
+    </div>
    </div>
   </div>
   <div class="card">
-   <div class="card-title" style="margin-left: 20px;">
-    <p>StackVM</p>
+   <div class="card-title">
+    StackVM
    </div>
    <hr />
    <div class="card-content">
     <p>
-     Stack based virtual machine, something like JVM
+     Stack-based virtual machine implementation, similar to the Java Virtual Machine (JVM). Executes bytecode instructions using a stack-based architecture.
     </p>
-    <br />
-    Language: Rust
-    <br />
-    <a href="https://github.com/NishanthSpShetty/Stack-VM">Repository</a>
+    <span class="language-tag">Rust</span>
+    <div style="margin-top: 1rem;">
+     <a href="https://github.com/NishanthSpShetty/Stack-VM" target="_blank" rel="noopener noreferrer">
+      <i class="material-icons" style="vertical-align: middle; font-size: 1.2rem;">code</i> View Repository
+     </a>
+    </div>
    </div>
   </div>
   <div class="card">
-   <div class="card-title" style="margin-left: 20px;">
-    <p>gRPC interceptors</p>
+   <div class="card-title">
+    gRPC Interceptors
    </div>
    <hr />
    <div class="card-content">
     <p>
-     Middleware library to be used in Go gRPC application for logging, tracing RPC requests. Users can add there own functionality.
+     Middleware library for Go gRPC applications that provides logging, tracing, and monitoring of RPC requests. Extensible architecture allows users to add custom functionality.
     </p>
-    <br />
-    Language: Golang
-    <br />
-    <a href="https://github.com/NishanthSpShetty/grpc-interceptors">Repository</a>
+    <span class="language-tag">Golang</span>
+    <div style="margin-top: 1rem;">
+     <a href="https://github.com/NishanthSpShetty/grpc-interceptors" target="_blank" rel="noopener noreferrer">
+      <i class="material-icons" style="vertical-align: middle; font-size: 1.2rem;">code</i> View Repository
+     </a>
+    </div>
    </div>
   </div>
   <div class="card">
-   <div class="card-title" style="margin-left: 20px;">
-    <p>gmod</p>
+   <div class="card-title">
+    gmod
    </div>
    <hr />
    <div class="card-content">
     <p>
-     Tool to quickly setup Golang project with module initialized.
+     Command-line tool to quickly scaffold and initialize Golang projects with proper module structure and best practices.
     </p>
-    <br />
-    Language: Rust
-    <br />
-    <a href="https://github.com/NishanthSpShetty/gmod">Repository</a>
+    <span class="language-tag">Rust</span>
+    <div style="margin-top: 1rem;">
+     <a href="https://github.com/NishanthSpShetty/gmod" target="_blank" rel="noopener noreferrer">
+      <i class="material-icons" style="vertical-align: middle; font-size: 1.2rem;">code</i> View Repository
+     </a>
+    </div>
    </div>
   </div>
  </div>
-</div>
 </div>

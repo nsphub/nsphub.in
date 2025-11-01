@@ -2,16 +2,31 @@
 <html lang="en">
 
 <head>
-  <title>nsphub</title>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <title>nshub</title>
+ <meta name="description" content="Personal portfolio showcasing projects in systems programming, distributed systems, Rust, Golang, and more.">
+ <meta name="author" content="Nishanth Shetty">
+ 
+ <!-- Open Graph / Social Media -->
+ <meta property="og:type" content="website">
+ <meta property="og:title" content="nshub">
+ <meta property="og:description" content="Personal portfolio showcasing projects in systems programming, distributed systems, Rust, Golang, and more.">
+ 
+ <!-- Stylesheets -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
  <link rel="stylesheet" href="/css/global.css" />
+ <link rel="stylesheet" href="/css/home.css" />
+ <link rel="stylesheet" href="/css/contact.css" />
+ <link rel="stylesheet" href="/css/about.css" />
+ <link rel="stylesheet" href="/css/article.css" />
+ 
+ <!-- Scripts -->
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
- <link rel="stylesheet" href="/css/home.css" />
- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
- <script src="/scripts/nav.js"> </script>
+ <script src="/scripts/nav.js"></script>
 
  
 <meta name="description" content="">
@@ -26,130 +41,177 @@
       <a href="/" class="brand-logo"><div class="nsphub-logo">nsphub</div></a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-
-    <li><a href="/">Home</a></li>
-    <li><a href="/article">Article</a></li>
-    <li><a href="/contact">Contact</a></li>
-    <li><a href="/about">About</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/article">Articles</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/about">About</a></li>
       </ul>
     </div>
   </nav>
 </div>
 
   <ul class="sidenav" id="mobile-demo">
-
     <li><a href="/">Home</a></li>
-    <li><a href="/article">Article</a></li>
+    <li><a href="/article">Articles</a></li>
     <li><a href="/contact">Contact</a></li>
     <li><a href="/about">About</a></li>
   </ul>
 
- <br />
-<div class="container">
+ <main>
+  <div class="container">
  <div class="row">
   <h4>Projects</h4>
   <div class="card">
-   <div class="card-title" style="margin-left: 10px;">
+   <div class="card-title">
     Lignum
    </div>
    <hr />
    <div class="card-image">
     <div class="container">
-     <img style="width: 100%; max-width: 600px; height: auto;" src="assets/images/lignum_draw.jpeg">
+     <img src="assets/images/lignum_draw.jpeg" alt="Lignum distributed message queue architecture diagram">
     </div>
    </div>
    <div class="card-content">
     <p>
-     Distributed message queue built using Golang something like Kafka. Uses consul for distributed leader election.
-     <br />
-     Runs in a single node or cluster mode, with abilty to replication, message persistancy and exposes REST and gRPC endpoints to publish and consume messages.
+     Distributed message queue built using Golang, similar to Kafka. Uses Consul for distributed leader election.
+     Runs in single node or cluster mode, with ability to replicate, persist messages, and exposes REST and gRPC endpoints to publish and consume messages.
     </p>
-    <br />
-    Language: Golang
-    <br />
-    <a href="https://github.com/NishanthSpShetty/lignum">Repository</a>
-    <br />
-    <a href="ihttps://medium.com/dev-genius/lignum-distributed-message-queue-403d38548dbe">Introductory article to Lignum</a>
+    <span class="language-tag">Golang</span>
+    <div style="margin-top: 1rem;">
+     <a href="https://github.com/NishanthSpShetty/lignum" target="_blank" rel="noopener noreferrer">
+      <i class="material-icons" style="vertical-align: middle; font-size: 1.2rem;">code</i> View Repository
+     </a>
+     <a href="https://medium.com/dev-genius/lignum-distributed-message-queue-403d38548dbe" target="_blank" rel="noopener noreferrer">
+      <i class="material-icons" style="vertical-align: middle; font-size: 1.2rem;">article</i> Read Article
+     </a>
+    </div>
    </div>
   </div>
   <div class="card">
-   <div class="card-title" style="margin-left: 10px;">
+   <div class="card-title">
     Crust
    </div>
    <hr />
    <div class="card-content">
     <p>
-     C/C++ to Rust transpiler written in Rust
+     C/C++ to Rust transpiler written in Rust. Converts C and C++ code into idiomatic Rust code.
     </p>
-    <br />
-    Language: Rust
-    <br />
-    <a href="https://github.com/NishanthSpShetty/crust">Repository</a>
+    <span class="language-tag">Rust</span>
+    <div style="margin-top: 1rem;">
+     <a href="https://github.com/NishanthSpShetty/crust" target="_blank" rel="noopener noreferrer">
+      <i class="material-icons" style="vertical-align: middle; font-size: 1.2rem;">code</i> View Repository
+     </a>
+    </div>
    </div>
   </div>
   <div class="card">
-   <div class="card-title" style="margin-left: 20px;">
-    <p>Genesis</p>
+   <div class="card-title">
+    Genesis
    </div>
    <hr />
    <div class="card-content">
     <p>
-     An attempt to learn and build OS kernel
+     An educational project to learn and build an operating system kernel from scratch.
     </p>
-    <br />
-    Language: C, Assembly
-    <br />
-    <a href="https://github.com/NishanthSpShetty/genesis">Repository</a>
+    <span class="language-tag">C</span>
+    <span class="language-tag">Assembly</span>
+    <div style="margin-top: 1rem;">
+     <a href="https://github.com/NishanthSpShetty/genesis" target="_blank" rel="noopener noreferrer">
+      <i class="material-icons" style="vertical-align: middle; font-size: 1.2rem;">code</i> View Repository
+     </a>
+    </div>
    </div>
   </div>
   <div class="card">
-   <div class="card-title" style="margin-left: 20px;">
-    <p>StackVM</p>
+   <div class="card-title">
+    StackVM
    </div>
    <hr />
    <div class="card-content">
     <p>
-     Stack based virtual machine, something like JVM
+     Stack-based virtual machine implementation, similar to the Java Virtual Machine (JVM). Executes bytecode instructions using a stack-based architecture.
     </p>
-    <br />
-    Language: Rust
-    <br />
-    <a href="https://github.com/NishanthSpShetty/Stack-VM">Repository</a>
+    <span class="language-tag">Rust</span>
+    <div style="margin-top: 1rem;">
+     <a href="https://github.com/NishanthSpShetty/Stack-VM" target="_blank" rel="noopener noreferrer">
+      <i class="material-icons" style="vertical-align: middle; font-size: 1.2rem;">code</i> View Repository
+     </a>
+    </div>
    </div>
   </div>
   <div class="card">
-   <div class="card-title" style="margin-left: 20px;">
-    <p>gRPC interceptors</p>
+   <div class="card-title">
+    gRPC Interceptors
    </div>
    <hr />
    <div class="card-content">
     <p>
-     Middleware library to be used in Go gRPC application for logging, tracing RPC requests. Users can add there own functionality.
+     Middleware library for Go gRPC applications that provides logging, tracing, and monitoring of RPC requests. Extensible architecture allows users to add custom functionality.
     </p>
-    <br />
-    Language: Golang
-    <br />
-    <a href="https://github.com/NishanthSpShetty/grpc-interceptors">Repository</a>
+    <span class="language-tag">Golang</span>
+    <div style="margin-top: 1rem;">
+     <a href="https://github.com/NishanthSpShetty/grpc-interceptors" target="_blank" rel="noopener noreferrer">
+      <i class="material-icons" style="vertical-align: middle; font-size: 1.2rem;">code</i> View Repository
+     </a>
+    </div>
    </div>
   </div>
   <div class="card">
-   <div class="card-title" style="margin-left: 20px;">
-    <p>gmod</p>
+   <div class="card-title">
+    gmod
    </div>
    <hr />
    <div class="card-content">
     <p>
-     Tool to quickly setup Golang project with module initialized.
+     Command-line tool to quickly scaffold and initialize Golang projects with proper module structure and best practices.
     </p>
-    <br />
-    Language: Rust
-    <br />
-    <a href="https://github.com/NishanthSpShetty/gmod">Repository</a>
+    <span class="language-tag">Rust</span>
+    <div style="margin-top: 1rem;">
+     <a href="https://github.com/NishanthSpShetty/gmod" target="_blank" rel="noopener noreferrer">
+      <i class="material-icons" style="vertical-align: middle; font-size: 1.2rem;">code</i> View Repository
+     </a>
+    </div>
    </div>
   </div>
  </div>
 </div>
-</div>
+ </main>
+
+ <footer class="page-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5>nsphub</h5>
+        <p class="footer-description">
+          Software engineer passionate about systems programming, distributed systems, and building robust applications.
+        </p>
+      </div>
+      <div class="col l4 offset-l2 s12">
+        <h5>Connect</h5>
+        <ul class="footer-links">
+          <li><a href="https://github.com/NishanthSpShetty" target="_blank" rel="noopener noreferrer">
+            <i class="material-icons">code</i> GitHub
+          </a></li>
+          <li><a href="https://www.linkedin.com/in/nishanthspshetty/" target="_blank" rel="noopener noreferrer">
+            <i class="material-icons">work</i> LinkedIn
+          </a></li>
+          <li><a href="https://medium.com/@nishanthspshetty" target="_blank" rel="noopener noreferrer">
+            <i class="material-icons">article</i> Medium
+          </a></li>
+          <li><a href="mailto:nishanthspshetty@gmail.com">
+            <i class="material-icons">email</i> Email
+          </a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      © 2024 nsphub. Built with <a href="https://www.11ty.dev/" target="_blank" rel="noopener noreferrer">Eleventy</a>
+    </div>
+  </div>
+ </footer>
+
 </body>
 
 </html>

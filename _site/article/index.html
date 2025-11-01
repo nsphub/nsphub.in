@@ -2,19 +2,34 @@
 <html lang="en">
 
 <head>
-  <title>nshub/articles</title>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <title>nsphub/articles</title>
+ <meta name="description" content="Technical articles and blog posts">
+ <meta name="author" content="Nishanth Shetty">
+ 
+ <!-- Open Graph / Social Media -->
+ <meta property="og:type" content="website">
+ <meta property="og:title" content="nsphub/articles">
+ <meta property="og:description" content="Technical articles and blog posts">
+ 
+ <!-- Stylesheets -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
  <link rel="stylesheet" href="/css/global.css" />
+ <link rel="stylesheet" href="/css/home.css" />
+ <link rel="stylesheet" href="/css/contact.css" />
+ <link rel="stylesheet" href="/css/about.css" />
+ <link rel="stylesheet" href="/css/article.css" />
+ 
+ <!-- Scripts -->
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
- <link rel="stylesheet" href="/css/home.css" />
- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
- <script src="/scripts/nav.js"> </script>
+ <script src="/scripts/nav.js"></script>
 
  
-<meta name="description" content="this is how you can reach out to me">
+<meta name="description" content="Technical articles and blog posts">
 <link rel="stylesheet" type="" href="/css/article.css">
 
 </head>
@@ -27,76 +42,147 @@
       <a href="/" class="brand-logo"><div class="nsphub-logo">nsphub</div></a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-
-    <li><a href="/">Home</a></li>
-    <li><a href="/article">Article</a></li>
-    <li><a href="/contact">Contact</a></li>
-    <li><a href="/about">About</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/article">Articles</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/about">About</a></li>
       </ul>
     </div>
   </nav>
 </div>
 
   <ul class="sidenav" id="mobile-demo">
-
     <li><a href="/">Home</a></li>
-    <li><a href="/article">Article</a></li>
+    <li><a href="/article">Articles</a></li>
     <li><a href="/contact">Contact</a></li>
     <li><a href="/about">About</a></li>
   </ul>
 
- <br />
-<div class="container">
+ <main>
+  <div class="container">
  <div class="row">
-  <div class="row">
-   <div class="card ">
-    <div class="card-title">
-     <div style="margin-left: 10px;">
-      Check out the following articles
-     </div>
-     <hr />
-    </div>
-    <div class="card-content">
-     <ol style="list-style-type: square; margin-left: 20px;">
-      <li>
-       <a href="https://medium.com/dev-genius/lignum-distributed-message-queue-403d38548dbe"> Lignum: Introduction to distributed message queue I have implemented</a>
-      </li>
-      <br />
-      <li>
-       <a href="https://medium.com/@nishanthspshetty/managing-multiple-eks-cluster-with-different-aws-accounts-8c793adcabf0">
-        Managing multiple EKS cluster with different AWS accounts
-       </a>
-      </li>
-      <br />
-      <li>
-       <a href="https://medium.com/@nishanthspshetty/neovim-elixir-b2b3904cc9c2">
-        Setting up neovim for elixir development
-       </a>
-      </li>
-      <br />
-      <li>
-       <a href="https://medium.com/gojekengineering/two-years-and-a-thousand-learnings-later-3ccdff6730c9">
-        2years of journey at Gojek
-       </a>
-      </li>
-      <br />
-      <li>
-       <a href="https://medium.com/gojekengineering/drafting-a-jvm-with-rust-1de3129997c9">
-        Understanding JVM by implmenting one using Rust
-       </a>
-      </li>
-      <br />
-      <li>
-       <a href="https://medium.com/gojekengineering/a-toast-from-postgresql-83b83d0d0683">
-        Toast in PostgreSQL
-       </a>
-      </li>
-     </ol>
+  <h4>Articles</h4>
+  <div class="card">
+   <div class="card-title">
+    Technical Writing
+   </div>
+   <hr />
+   <div class="card-content">
+    <p>Here are some of my technical articles covering distributed systems, programming languages, and infrastructure.</p>
+    <div class="article-list">
+     <article class="article-item">
+      <div class="article-icon">
+       <i class="material-icons">article</i>
+      </div>
+      <div class="article-content">
+       <h5><a href="https://medium.com/dev-genius/lignum-distributed-message-queue-403d38548dbe" target="_blank" rel="noopener noreferrer">Lignum: Distributed Message Queue</a></h5>
+       <p>Introduction to the distributed message queue I implemented using Golang</p>
+       <span class="article-tag">Distributed Systems</span>
+       <span class="article-tag">Golang</span>
+      </div>
+     </article>
+     
+     <article class="article-item">
+      <div class="article-icon">
+       <i class="material-icons">cloud</i>
+      </div>
+      <div class="article-content">
+       <h5><a href="https://medium.com/@nishanthspshetty/managing-multiple-eks-cluster-with-different-aws-accounts-8c793adcabf0" target="_blank" rel="noopener noreferrer">Managing Multiple EKS Clusters</a></h5>
+       <p>Best practices for managing multiple EKS clusters across different AWS accounts</p>
+       <span class="article-tag">AWS</span>
+       <span class="article-tag">Kubernetes</span>
+      </div>
+     </article>
+     
+     <article class="article-item">
+      <div class="article-icon">
+       <i class="material-icons">code</i>
+      </div>
+      <div class="article-content">
+       <h5><a href="https://medium.com/@nishanthspshetty/neovim-elixir-b2b3904cc9c2" target="_blank" rel="noopener noreferrer">Neovim for Elixir Development</a></h5>
+       <p>Setting up and configuring Neovim for productive Elixir development</p>
+       <span class="article-tag">Neovim</span>
+       <span class="article-tag">Elixir</span>
+      </div>
+     </article>
+     
+     <article class="article-item">
+      <div class="article-icon">
+       <i class="material-icons">work</i>
+      </div>
+      <div class="article-content">
+       <h5><a href="https://medium.com/gojekengineering/two-years-and-a-thousand-learnings-later-3ccdff6730c9" target="_blank" rel="noopener noreferrer">Two Years at Gojek</a></h5>
+       <p>Reflections on my journey and learnings from two years at Gojek</p>
+       <span class="article-tag">Career</span>
+       <span class="article-tag">Engineering</span>
+      </div>
+     </article>
+     
+     <article class="article-item">
+      <div class="article-icon">
+       <i class="material-icons">memory</i>
+      </div>
+      <div class="article-content">
+       <h5><a href="https://medium.com/gojekengineering/drafting-a-jvm-with-rust-1de3129997c9" target="_blank" rel="noopener noreferrer">Implementing a JVM with Rust</a></h5>
+       <p>Understanding the Java Virtual Machine by implementing one using Rust</p>
+       <span class="article-tag">Rust</span>
+       <span class="article-tag">JVM</span>
+      </div>
+     </article>
+     
+     <article class="article-item">
+      <div class="article-icon">
+       <i class="material-icons">storage</i>
+      </div>
+      <div class="article-content">
+       <h5><a href="https://medium.com/gojekengineering/a-toast-from-postgresql-83b83d0d0683" target="_blank" rel="noopener noreferrer">TOAST in PostgreSQL</a></h5>
+       <p>Deep dive into PostgreSQL's TOAST (The Oversized-Attribute Storage Technique)</p>
+       <span class="article-tag">PostgreSQL</span>
+       <span class="article-tag">Database</span>
+      </div>
+     </article>
     </div>
    </div>
   </div>
  </div>
 </div>
+ </main>
+
+ <footer class="page-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5>nsphub</h5>
+        <p class="footer-description">
+          Software engineer passionate about systems programming, distributed systems, and building robust applications.
+        </p>
+      </div>
+      <div class="col l4 offset-l2 s12">
+        <h5>Connect</h5>
+        <ul class="footer-links">
+          <li><a href="https://github.com/NishanthSpShetty" target="_blank" rel="noopener noreferrer">
+            <i class="material-icons">code</i> GitHub
+          </a></li>
+          <li><a href="https://www.linkedin.com/in/nishanthspshetty/" target="_blank" rel="noopener noreferrer">
+            <i class="material-icons">work</i> LinkedIn
+          </a></li>
+          <li><a href="https://medium.com/@nishanthspshetty" target="_blank" rel="noopener noreferrer">
+            <i class="material-icons">article</i> Medium
+          </a></li>
+          <li><a href="mailto:nishanthspshetty@gmail.com">
+            <i class="material-icons">email</i> Email
+          </a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      © 2024 nsphub. Built with <a href="https://www.11ty.dev/" target="_blank" rel="noopener noreferrer">Eleventy</a>
+    </div>
+  </div>
+ </footer>
+
 </body>
 
 </html>
