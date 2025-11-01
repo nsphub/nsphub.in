@@ -1,25 +1,27 @@
 @import url('./reset.css');
 
 :root {
-    /* Terminal/Hacker Theme - Dark Mode */
-    --primary-color: #00ff41;
-    --primary-dark: #00cc33;
-    --primary-light: #33ff66;
-    --secondary-color: #00ffff;
-    --accent-color: #ff0080;
-    --background: #0a0e27;
-    --surface: #0f1419;
-    --surface-elevated: #1a1f2e;
-    --text-primary: #00ff41;
-    --text-secondary: #8892b0;
-    --text-muted: #495670;
-    --border-color: #1a2332;
-    --border-glow: #00ff41;
-    --shadow-sm: 0 1px 2px 0 rgba(0, 255, 65, 0.1);
-    --shadow-md: 0 4px 6px -1px rgba(0, 255, 65, 0.2), 0 2px 4px -1px rgba(0, 255, 65, 0.1);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 255, 65, 0.3), 0 4px 6px -2px rgba(0, 255, 65, 0.2);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 255, 65, 0.4), 0 10px 10px -5px rgba(0, 255, 65, 0.3);
-    --shadow-glow: 0 0 20px rgba(0, 255, 65, 0.5);
+    /* Enhanced Terminal/Hacker Theme - Dark Mode */
+    --primary-color: #00ff88;
+    --primary-dark: #00cc66;
+    --primary-light: #33ffaa;
+    --secondary-color: #00d9ff;
+    --accent-color: #ff2d95;
+    --warning-color: #ffaa00;
+    --background: #0d1117;
+    --surface: #161b22;
+    --surface-elevated: #1f2937;
+    --text-primary: #e6edf3;
+    --text-secondary: #7d8590;
+    --text-muted: #484f58;
+    --text-bright: #00ff88;
+    --border-color: #30363d;
+    --border-glow: #00ff88;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 255, 136, 0.15);
+    --shadow-md: 0 4px 6px -1px rgba(0, 255, 136, 0.25), 0 2px 4px -1px rgba(0, 255, 136, 0.15);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 255, 136, 0.35), 0 4px 6px -2px rgba(0, 255, 136, 0.25);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 255, 136, 0.45), 0 10px 10px -5px rgba(0, 255, 136, 0.35);
+    --shadow-glow: 0 0 25px rgba(0, 255, 136, 0.6);
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -28,11 +30,14 @@
 }
 
 body {
-    background: var(--background);
+    background: #0a0f1e;
     background-image:
-        repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 255, 65, 0.03) 2px, rgba(0, 255, 65, 0.03) 4px),
-        radial-gradient(circle at 20% 50%, rgba(0, 255, 65, 0.05) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(0, 255, 255, 0.05) 0%, transparent 50%);
+        linear-gradient(180deg, #0a0f1e 0%, #0d1117 50%, #0a0f1e 100%),
+        repeating-linear-gradient(90deg, transparent 0px, rgba(0, 255, 136, 0.02) 1px, transparent 2px, transparent 100px),
+        repeating-linear-gradient(0deg, transparent 0px, rgba(0, 255, 136, 0.02) 1px, transparent 2px, transparent 100px),
+        radial-gradient(ellipse at 10% 20%, rgba(0, 255, 136, 0.1) 0%, transparent 40%),
+        radial-gradient(ellipse at 90% 80%, rgba(0, 217, 255, 0.08) 0%, transparent 40%),
+        radial-gradient(ellipse at 50% 50%, rgba(0, 255, 136, 0.03) 0%, transparent 60%);
     font-family: 'Fira Code', 'Courier New', 'Consolas', monospace;
     color: var(--text-primary);
     line-height: 1.6;
@@ -47,15 +52,26 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: repeating-linear-gradient(
-        0deg,
-        rgba(0, 255, 65, 0.03) 0px,
-        transparent 1px,
-        transparent 2px,
-        rgba(0, 255, 65, 0.03) 3px
-    );
+    background:
+        repeating-linear-gradient(
+            0deg,
+            rgba(0, 255, 136, 0.03) 0px,
+            transparent 1px,
+            transparent 2px,
+            rgba(0, 255, 136, 0.03) 3px
+        );
     pointer-events: none;
     z-index: 1;
+    animation: scanline 8s linear infinite;
+}
+
+@keyframes scanline {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(10px);
+    }
 }
 
 body > * {
@@ -100,10 +116,10 @@ body > * {
 .card-title {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--primary-color);
+    color: var(--text-bright);
     padding: 1.5rem 1.5rem 0.5rem;
     margin: 0 !important;
-    text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+    text-shadow: 0 0 15px rgba(0, 255, 136, 0.6);
     font-family: 'Fira Code', monospace;
     letter-spacing: 0.05em;
 }
@@ -111,6 +127,7 @@ body > * {
 .card-title::before {
     content: '> ';
     color: var(--secondary-color);
+    text-shadow: 0 0 10px rgba(0, 217, 255, 0.6);
 }
 
 .card-content {
@@ -128,8 +145,8 @@ body > * {
     border: none;
     border-top: 1px solid var(--border-glow);
     margin: 0 1.5rem;
-    opacity: 0.5;
-    box-shadow: 0 0 5px rgba(0, 255, 65, 0.3);
+    opacity: 0.6;
+    box-shadow: 0 0 8px rgba(0, 255, 136, 0.4);
 }
 
 /* Terminal-style link styling */
@@ -154,8 +171,8 @@ a::after {
 }
 
 a:hover {
-    color: var(--primary-color);
-    text-shadow: 0 0 8px rgba(0, 255, 65, 0.8);
+    color: var(--text-bright);
+    text-shadow: 0 0 12px rgba(0, 255, 136, 0.9);
 }
 
 a:hover::after {
@@ -171,12 +188,12 @@ a:hover::after {
 
 /* Terminal-style heading improvements */
 h1, h2, h3, h4, h5, h6 {
-    color: var(--primary-color);
+    color: var(--text-bright);
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 1rem;
     font-family: 'Fira Code', monospace;
-    text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+    text-shadow: 0 0 15px rgba(0, 255, 136, 0.6);
 }
 
 h4 {
@@ -397,5 +414,116 @@ main {
         box-shadow: none;
         border: 1px solid #ddd;
         page-break-inside: avoid;
+    }
+}
+
+/* Enhanced Mobile Optimizations */
+@media (max-width: 600px) {
+    /* Better touch targets */
+    nav ul a,
+    .sidenav li > a,
+    .card-content a,
+    .contact-link,
+    .article-item,
+    .footer-links a {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+    
+    /* Improved readability */
+    body {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+    
+    /* Better spacing */
+    .container {
+        padding: 1rem 0.75rem;
+    }
+    
+    .card {
+        margin-bottom: 1.25rem;
+        border-width: 1px;
+    }
+    
+    .card-title {
+        font-size: 1.15rem;
+        padding: 1rem;
+    }
+    
+    .card-content {
+        padding: 1rem;
+        font-size: 0.95rem;
+    }
+    
+    /* Optimize headings */
+    h4 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    h6 {
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+    
+    /* Better list spacing */
+    .tech-list li {
+        padding: 0.875rem 0;
+        font-size: 0.9rem;
+    }
+    
+    /* Optimize language tags */
+    .language-tag {
+        font-size: 0.75rem !important;
+        padding: 0.25rem 0.5rem !important;
+        margin: 0.25rem 0.25rem 0.25rem 0 !important;
+    }
+    
+    /* Footer optimization */
+    .page-footer {
+        padding-top: 1.5rem;
+    }
+    
+    .page-footer h5 {
+        font-size: 1.25rem;
+    }
+    
+    .page-footer .footer-description {
+        font-size: 0.9rem;
+    }
+    
+    .footer-links a {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.9rem;
+    }
+    
+    /* Prevent horizontal scroll */
+    body {
+        overflow-x: hidden;
+    }
+    
+    * {
+        max-width: 100%;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 400px) {
+    .card-title {
+        font-size: 1.05rem;
+    }
+    
+    .card-content {
+        font-size: 0.9rem;
+    }
+    
+    h4 {
+        font-size: 1.35rem;
+    }
+    
+    .tech-list li {
+        font-size: 0.85rem;
     }
 }
