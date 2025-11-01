@@ -1,4 +1,4 @@
-/* Contact page specific styling */
+/* Terminal-style Contact page */
 .contact-card {
     max-width: 800px;
     margin: 0 auto;
@@ -16,31 +16,40 @@
     align-items: center;
     gap: 1rem;
     padding: 1rem 1.5rem;
-    background: var(--background);
+    background: transparent;
     border: 2px solid var(--border-color);
-    border-radius: 8px;
+    border-radius: 2px;
     transition: var(--transition);
-    color: var(--text-primary) !important;
+    color: var(--text-secondary) !important;
     font-weight: 500;
+    font-family: 'Fira Code', monospace;
+    position: relative;
+}
+
+.contact-link::before {
+    content: '> ';
+    color: var(--primary-color);
+    font-weight: bold;
 }
 
 .contact-link:hover {
-    background: var(--primary-color);
-    border-color: var(--primary-color);
-    color: white !important;
+    background: rgba(0, 255, 65, 0.05);
+    border-color: var(--border-glow);
+    color: var(--primary-color) !important;
     transform: translateX(8px);
     text-decoration: none;
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--shadow-glow);
 }
 
 .contact-link i {
     font-size: 1.5rem;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     transition: var(--transition);
 }
 
 .contact-link:hover i {
-    color: white;
+    color: var(--primary-color);
+    text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
 }
 
 .contact-link span {

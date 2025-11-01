@@ -1,4 +1,4 @@
-/* About page specific styling */
+/* Terminal-style About page */
 .tech-list {
     list-style: none;
     padding: 0;
@@ -10,6 +10,9 @@
     border-bottom: 1px solid var(--border-color);
     display: flex;
     align-items: center;
+    font-family: 'Fira Code', monospace;
+    color: var(--text-secondary);
+    transition: var(--transition);
 }
 
 .tech-list li:last-child {
@@ -17,28 +20,34 @@
 }
 
 .tech-list li::before {
-    content: '✓';
+    content: '[✓]';
     display: inline-block;
-    width: 24px;
-    height: 24px;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: white;
-    border-radius: 50%;
+    width: 40px;
+    color: var(--primary-color);
     text-align: center;
-    line-height: 24px;
     margin-right: 1rem;
     font-weight: bold;
     flex-shrink: 0;
+    text-shadow: 0 0 5px rgba(0, 255, 65, 0.5);
+}
+
+.tech-list li:hover {
+    color: var(--primary-color);
+    padding-left: 0.5rem;
+    border-left: 2px solid var(--primary-color);
 }
 
 .tech-list strong {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-right: 0.5rem;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
 }
 
 /* Card content improvements for about page */
 .about .card-content p {
     margin-bottom: 1.25rem;
+    font-family: 'Fira Code', monospace;
+    color: var(--text-secondary);
 }
 
 .about .card-content p:last-child {

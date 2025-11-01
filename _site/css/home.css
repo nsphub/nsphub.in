@@ -8,7 +8,7 @@
     display: block;
 }
 
-/* Navigation improvements */
+/* Terminal-style Navigation */
 .navbar-fixed {
     position: fixed;
     top: 0;
@@ -18,8 +18,9 @@
 }
 
 nav {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
-    box-shadow: var(--shadow-md);
+    background: var(--surface) !important;
+    border-bottom: 2px solid var(--border-glow);
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
     height: 64px;
     line-height: 64px;
 }
@@ -32,26 +33,28 @@ nav {
 }
 
 .brand-logo {
-    color: white !important;
+    color: var(--primary-color) !important;
     transition: var(--transition);
     font-size: 1.5rem;
     font-weight: 700;
-    letter-spacing: -0.5px;
+    letter-spacing: 0.05em;
     padding: 0 !important;
     margin: 0 !important;
     height: 64px;
     line-height: 64px;
-    display: inline-flex;
+    display: flex;
     align-items: center;
+    font-family: 'Fira Code', monospace;
+    text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
 }
 
 .nsphub-logo {
-    color: white !important;
-    display: inline-block;
+    color: var(--primary-color) !important;
 }
 
 .brand-logo:hover {
-    opacity: 0.9;
+    text-shadow: 0 0 20px rgba(0, 255, 65, 0.8);
+    transform: scale(1.05);
 }
 
 nav ul {
@@ -63,7 +66,7 @@ nav ul li {
 }
 
 nav ul a {
-    color: rgba(255, 255, 255, 0.95) !important;
+    color: var(--text-secondary) !important;
     font-weight: 500;
     transition: var(--transition);
     position: relative;
@@ -72,6 +75,14 @@ nav ul a {
     padding: 0 20px;
     display: flex;
     align-items: center;
+    font-family: 'Fira Code', monospace;
+}
+
+nav ul a::before {
+    content: '> ';
+    opacity: 0;
+    transition: var(--transition);
+    color: var(--primary-color);
 }
 
 nav ul a::after {
@@ -81,36 +92,53 @@ nav ul a::after {
     left: 50%;
     transform: translateX(-50%);
     width: 0;
-    height: 3px;
-    background: white;
+    height: 2px;
+    background: var(--primary-color);
+    box-shadow: 0 0 10px var(--primary-color);
     transition: var(--transition);
 }
 
 nav ul a:hover {
-    background-color: rgba(255, 255, 255, 0.15) !important;
-    color: white !important;
+    background-color: rgba(0, 255, 65, 0.05) !important;
+    color: var(--primary-color) !important;
+    text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+}
+
+nav ul a:hover::before {
+    opacity: 1;
 }
 
 nav ul a:hover::after {
     width: 70%;
 }
 
-/* Mobile navigation */
+/* Terminal-style mobile navigation */
 .sidenav {
-    background: var(--surface);
-    box-shadow: var(--shadow-xl);
+    background: var(--surface) !important;
+    border-right: 2px solid var(--border-glow);
+    box-shadow: var(--shadow-glow);
 }
 
 .sidenav li > a {
-    color: var(--text-primary) !important;
+    color: var(--text-secondary) !important;
     font-weight: 500;
     padding: 1rem 2rem;
     transition: var(--transition);
+    font-family: 'Fira Code', monospace;
+    border-left: 3px solid transparent;
+}
+
+.sidenav li > a::before {
+    content: '> ';
+    color: var(--primary-color);
+    margin-right: 0.5rem;
 }
 
 .sidenav li > a:hover {
-    background-color: var(--primary-light) !important;
-    color: white !important;
+    background-color: rgba(0, 255, 65, 0.1) !important;
+    color: var(--primary-color) !important;
+    border-left-color: var(--primary-color);
+    text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
 }
 
 /* Add spacing for fixed navbar */
@@ -118,35 +146,52 @@ body {
     padding-top: 64px;
 }
 
-/* Project cards specific styling */
+/* Terminal-style language tags */
 .card-content .language-tag {
     display: inline-block;
-    background: linear-gradient(135deg, var(--primary-light), var(--secondary-color));
-    color: white;
+    background: transparent;
+    color: var(--primary-color);
     padding: 0.25rem 0.75rem;
-    border-radius: 20px;
-    font-size: 0.875rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 2px;
+    font-size: 0.75rem;
     font-weight: 600;
-    margin: 0.5rem 0;
+    margin: 0.5rem 0.5rem 0.5rem 0;
+    font-family: 'Fira Code', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    box-shadow: 0 0 5px rgba(0, 255, 65, 0.3);
+    transition: var(--transition);
 }
 
-/* Improve link spacing in cards */
+.card-content .language-tag:hover {
+    background: var(--primary-color);
+    color: var(--surface);
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.6);
+}
+
+/* Terminal-style link buttons in cards */
 .card-content a {
     display: inline-block;
-    margin: 0.5rem 0;
+    margin: 0.5rem 0.5rem 0.5rem 0;
     padding: 0.5rem 1rem;
-    background: var(--background);
-    border-radius: 6px;
+    background: transparent;
+    border-radius: 2px;
     transition: var(--transition);
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color) !important;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.875rem;
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
 }
 
 .card-content a:hover {
-    background: var(--primary-color);
-    color: white !important;
+    background: rgba(0, 255, 255, 0.1);
+    color: var(--primary-color) !important;
     border-color: var(--primary-color);
     text-decoration: none;
     transform: translateX(4px);
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.5);
 }
 
 /* Responsive improvements for home page */
