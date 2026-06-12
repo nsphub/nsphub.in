@@ -3,90 +3,112 @@ layout: layouts/article.html
 title: nsphub/articles
 description: "Technical articles and blog posts"
 ---
-<div class="container">
- <div class="row">
-  <h4>Articles</h4>
-  <div class="card">
-   <div class="card-title">
-    Technical Writing
+<div class="container page-shell">
+ <section class="page-hero">
+   <div>
+    <p class="section-kicker">Writing</p>
+    <h1 class="page-title">Notes on distributed systems, infrastructure, and engineering craft.</h1>
+    <p class="page-intro">
+     A curated set of articles covering backend architecture, platform engineering, developer workflows, and lessons learned while building systems.
+    </p>
    </div>
-   <hr />
-   <div class="card-content">
-    <p>Here are some of my technical articles covering distributed systems, programming languages, and infrastructure.</p>
-    <div class="article-list">
-     <article class="article-item">
-      <div class="article-icon">
-       <i class="material-icons">article</i>
-      </div>
-      <div class="article-content">
-       <h5><a href="https://medium.com/dev-genius/lignum-distributed-message-queue-403d38548dbe" target="_blank" rel="noopener noreferrer">Lignum: Distributed Message Queue</a></h5>
-       <p>Introduction to the distributed message queue I implemented using Golang</p>
+   <div class="page-hero-aside">
+    <strong>What you’ll find here</strong>
+    <p>Practical writing on backend architecture, infrastructure decisions, developer tooling, and lessons from building and operating systems at scale.</p>
+   </div>
+  </section>
+
+ <section class="card section-card">
+  <div class="card-title">
+   Technical Writing
+  </div>
+  <hr />
+  <div class="card-content">
+   <div class="article-list">
+    <article class="article-item">
+     <div class="article-icon">
+      <i class="material-icons">article</i>
+     </div>
+     <div class="article-content">
+      <h5><a href="https://medium.com/dev-genius/lignum-distributed-message-queue-403d38548dbe" target="_blank" rel="noopener noreferrer">Lignum: Distributed Message Queue</a></h5>
+      <p>Introduction to the distributed message queue I implemented using Golang.</p>
+      <div class="article-meta">
        <span class="article-tag">Distributed Systems</span>
        <span class="article-tag">Golang</span>
       </div>
-     </article>
-     
-     <article class="article-item">
-      <div class="article-icon">
-       <i class="material-icons">cloud</i>
-      </div>
-      <div class="article-content">
-       <h5><a href="https://medium.com/@nishanthspshetty/managing-multiple-eks-cluster-with-different-aws-accounts-8c793adcabf0" target="_blank" rel="noopener noreferrer">Managing Multiple EKS Clusters</a></h5>
-       <p>Best practices for managing multiple EKS clusters across different AWS accounts</p>
+     </div>
+    </article>
+
+    <article class="article-item">
+     <div class="article-icon">
+      <i class="material-icons">cloud</i>
+     </div>
+     <div class="article-content">
+      <h5><a href="https://medium.com/@nishanthspshetty/managing-multiple-eks-cluster-with-different-aws-accounts-8c793adcabf0" target="_blank" rel="noopener noreferrer">Managing Multiple EKS Clusters</a></h5>
+      <p>Best practices for managing multiple EKS clusters across different AWS accounts.</p>
+      <div class="article-meta">
        <span class="article-tag">AWS</span>
        <span class="article-tag">Kubernetes</span>
       </div>
-     </article>
-     
-     <article class="article-item">
-      <div class="article-icon">
-       <i class="material-icons">code</i>
-      </div>
-      <div class="article-content">
-       <h5><a href="https://medium.com/@nishanthspshetty/neovim-elixir-b2b3904cc9c2" target="_blank" rel="noopener noreferrer">Neovim for Elixir Development</a></h5>
-       <p>Setting up and configuring Neovim for productive Elixir development</p>
+     </div>
+    </article>
+
+    <article class="article-item">
+     <div class="article-icon">
+      <i class="material-icons">code</i>
+     </div>
+     <div class="article-content">
+      <h5><a href="https://medium.com/@nishanthspshetty/neovim-elixir-b2b3904cc9c2" target="_blank" rel="noopener noreferrer">Neovim for Elixir Development</a></h5>
+      <p>Setting up and configuring Neovim for productive Elixir development.</p>
+      <div class="article-meta">
        <span class="article-tag">Neovim</span>
        <span class="article-tag">Elixir</span>
       </div>
-     </article>
-     
-     <article class="article-item">
-      <div class="article-icon">
-       <i class="material-icons">work</i>
-      </div>
-      <div class="article-content">
-       <h5><a href="https://medium.com/gojekengineering/two-years-and-a-thousand-learnings-later-3ccdff6730c9" target="_blank" rel="noopener noreferrer">Two Years at Gojek</a></h5>
-       <p>Reflections on my journey and learnings from two years at Gojek</p>
+     </div>
+    </article>
+
+    <article class="article-item">
+     <div class="article-icon">
+      <i class="material-icons">work</i>
+     </div>
+     <div class="article-content">
+      <h5><a href="https://medium.com/gojekengineering/two-years-and-a-thousand-learnings-later-3ccdff6730c9" target="_blank" rel="noopener noreferrer">Two Years at Gojek</a></h5>
+      <p>Reflections on my journey and learnings from two years at Gojek.</p>
+      <div class="article-meta">
        <span class="article-tag">Career</span>
        <span class="article-tag">Engineering</span>
       </div>
-     </article>
-     
-     <article class="article-item">
-      <div class="article-icon">
-       <i class="material-icons">memory</i>
-      </div>
-      <div class="article-content">
-       <h5><a href="https://medium.com/gojekengineering/drafting-a-jvm-with-rust-1de3129997c9" target="_blank" rel="noopener noreferrer">Implementing a JVM with Rust</a></h5>
-       <p>Understanding the Java Virtual Machine by implementing one using Rust</p>
+     </div>
+    </article>
+
+    <article class="article-item">
+     <div class="article-icon">
+      <i class="material-icons">memory</i>
+     </div>
+     <div class="article-content">
+      <h5><a href="https://medium.com/gojekengineering/drafting-a-jvm-with-rust-1de3129997c9" target="_blank" rel="noopener noreferrer">Implementing a JVM with Rust</a></h5>
+      <p>Understanding the Java Virtual Machine by implementing one using Rust.</p>
+      <div class="article-meta">
        <span class="article-tag">Rust</span>
        <span class="article-tag">JVM</span>
       </div>
-     </article>
-     
-     <article class="article-item">
-      <div class="article-icon">
-       <i class="material-icons">storage</i>
-      </div>
-      <div class="article-content">
-       <h5><a href="https://medium.com/gojekengineering/a-toast-from-postgresql-83b83d0d0683" target="_blank" rel="noopener noreferrer">TOAST in PostgreSQL</a></h5>
-       <p>Deep dive into PostgreSQL's TOAST (The Oversized-Attribute Storage Technique)</p>
+     </div>
+    </article>
+
+    <article class="article-item">
+     <div class="article-icon">
+      <i class="material-icons">storage</i>
+     </div>
+     <div class="article-content">
+      <h5><a href="https://medium.com/gojekengineering/a-toast-from-postgresql-83b83d0d0683" target="_blank" rel="noopener noreferrer">TOAST in PostgreSQL</a></h5>
+      <p>Deep dive into PostgreSQL's TOAST (The Oversized-Attribute Storage Technique).</p>
+      <div class="article-meta">
        <span class="article-tag">PostgreSQL</span>
        <span class="article-tag">Database</span>
       </div>
-     </article>
-    </div>
+     </div>
+    </article>
    </div>
   </div>
- </div>
+ </section>
 </div>

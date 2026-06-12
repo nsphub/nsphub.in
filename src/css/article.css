@@ -1,37 +1,91 @@
-/* Terminal-style Article page */
+.page-shell {
+    display: grid;
+    gap: 2rem;
+}
+
+.page-hero {
+    padding: 1rem 0 0.5rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+    gap: 1.5rem;
+    align-items: end;
+}
+
+.page-title {
+    max-width: 16ch;
+    margin-bottom: 1rem;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+}
+
+.page-intro {
+    max-width: 64ch;
+    color: var(--text-secondary);
+    line-height: 1.85;
+}
+
+.page-hero-aside {
+    padding: 1.25rem;
+    border-radius: 24px;
+    background: rgba(15, 23, 42, 0.58);
+    border: 1px solid rgba(196, 181, 253, 0.16);
+    backdrop-filter: blur(14px);
+}
+
+.page-hero-aside p {
+    margin: 0;
+    color: var(--text-secondary);
+    line-height: 1.75;
+}
+
+.page-hero-aside strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.section-card {
+    border-radius: 28px;
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.78), rgba(30, 41, 59, 0.72));
+    border: 1px solid rgba(148, 163, 184, 0.14);
+    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.24);
+    backdrop-filter: blur(18px);
+}
+
 .article-list {
-    margin-top: 2rem;
+    display: grid;
+    gap: 1rem;
+    margin-top: 0.5rem;
 }
 
 .article-item {
     display: flex;
-    gap: 1.5rem;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    background: transparent;
-    border: 2px solid var(--border-color);
-    border-radius: 2px;
+    gap: 1.25rem;
+    padding: 1.35rem;
+    margin-bottom: 0;
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.52), rgba(30, 41, 59, 0.42));
+    border: 1px solid rgba(148, 163, 184, 0.14);
+    border-radius: 22px;
     transition: var(--transition);
     position: relative;
+    overflow: hidden;
 }
 
 .article-item::before {
     content: '';
     position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 3px;
-    background: var(--secondary-color);
+    inset: 0 auto 0 0;
+    width: 4px;
+    background: linear-gradient(180deg, var(--secondary-color), var(--primary-color));
     opacity: 0;
     transition: var(--transition);
 }
 
 .article-item:hover {
-    border-color: var(--border-glow);
-    transform: translateX(8px);
-    box-shadow: var(--shadow-glow);
-    background: rgba(0, 255, 65, 0.02);
+    border-color: rgba(196, 181, 253, 0.28);
+    transform: translateY(-4px);
+    box-shadow: 0 24px 48px rgba(15, 23, 42, 0.24);
 }
 
 .article-item:hover::before {
@@ -40,23 +94,23 @@
 
 .article-icon {
     flex-shrink: 0;
-    width: 48px;
-    height: 48px;
+    width: 52px;
+    height: 52px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: transparent;
-    border: 2px solid var(--secondary-color);
-    border-radius: 2px;
+    background: rgba(56, 189, 248, 0.1);
+    border: 1px solid rgba(125, 211, 252, 0.18);
+    border-radius: 18px;
     color: var(--secondary-color);
     transition: var(--transition);
 }
 
 .article-item:hover .article-icon {
-    background: rgba(0, 255, 255, 0.1);
-    border-color: var(--primary-color);
-    color: var(--primary-color);
-    box-shadow: 0 0 15px rgba(0, 255, 65, 0.5);
+    background: rgba(139, 92, 246, 0.12);
+    border-color: rgba(196, 181, 253, 0.28);
+    color: var(--primary-light);
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.16);
 }
 
 .article-icon i {
@@ -69,60 +123,75 @@
 
 .article-content h5 {
     margin: 0 0 0.5rem 0;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     font-weight: 600;
     font-family: 'Fira Code', monospace;
 }
 
 .article-content h5::before {
-    content: '>> ';
-    color: var(--secondary-color);
+    content: '';
 }
 
 .article-content h5 a {
-    color: var(--primary-color);
+    color: var(--text-primary);
     text-decoration: none;
     transition: var(--transition);
 }
 
 .article-content h5 a:hover {
-    color: var(--secondary-color);
-    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    color: var(--primary-color);
+    text-shadow: none;
 }
 
 .article-content p {
     color: var(--text-secondary);
     margin: 0 0 1rem 0;
-    line-height: 1.6;
+    line-height: 1.75;
     font-family: 'Fira Code', monospace;
 }
 
+.article-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
 .article-tag {
-    display: inline-block;
-    background: transparent;
-    color: var(--secondary-color);
-    padding: 0.25rem 0.75rem;
-    border: 1px solid var(--secondary-color);
-    border-radius: 2px;
-    font-size: 0.75rem;
+    display: inline-flex;
+    align-items: center;
+    background: rgba(139, 92, 246, 0.12);
+    color: var(--primary-light);
+    padding: 0.35rem 0.8rem;
+    border: 1px solid rgba(196, 181, 253, 0.18);
+    border-radius: 999px;
+    font-size: 0.72rem;
     font-weight: 600;
-    margin-right: 0.5rem;
-    margin-top: 0.5rem;
+    margin-right: 0;
+    margin-top: 0;
     font-family: 'Fira Code', monospace;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.08em;
     transition: var(--transition);
 }
 
 .article-item:hover .article-tag {
-    background: rgba(0, 255, 255, 0.1);
-    color: var(--primary-color);
-    border-color: var(--primary-color);
-    box-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
+    background: rgba(56, 189, 248, 0.12);
+    color: #dbeafe;
+    border-color: rgba(125, 211, 252, 0.28);
+    box-shadow: none;
 }
 
-/* Responsive design for articles */
+@media (max-width: 992px) {
+    .page-hero {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 768px) {
+    .page-title {
+        font-size: 2.4rem;
+    }
+
     .article-item {
         flex-direction: column;
         gap: 1rem;
@@ -130,8 +199,8 @@
     }
     
     .article-icon {
-        width: 40px;
-        height: 40px;
+        width: 44px;
+        height: 44px;
     }
     
     .article-icon i {
@@ -139,26 +208,22 @@
     }
     
     .article-content h5 {
-        font-size: 1.1rem;
+        font-size: 1.05rem;
     }
     
     .article-content p {
-        font-size: 0.9rem;
-    }
-    
-    .article-tag {
-        font-size: 0.7rem;
-        padding: 0.2rem 0.6rem;
+        font-size: 0.92rem;
     }
 }
 
 @media (max-width: 600px) {
-    .article-item {
-        padding: 0.875rem;
+    .page-title {
+        font-size: 2rem;
     }
-    
-    .article-content h5 {
-        font-size: 1rem;
+
+    .article-item {
+        padding: 0.95rem;
+        border-radius: 18px;
     }
 }
 

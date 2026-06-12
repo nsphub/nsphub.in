@@ -1,4 +1,147 @@
-/* Terminal-style About page */
+.page-shell {
+    display: grid;
+    gap: 2rem;
+}
+
+.page-hero {
+    padding: 1rem 0 0.5rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+    gap: 1.5rem;
+    align-items: end;
+}
+
+.page-title {
+    max-width: 16ch;
+    margin-bottom: 1rem;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+}
+
+.page-intro {
+    max-width: 64ch;
+    color: var(--text-secondary);
+    line-height: 1.85;
+}
+
+.page-hero-aside {
+    padding: 1.25rem;
+    border-radius: 24px;
+    background: rgba(15, 23, 42, 0.58);
+    border: 1px solid rgba(196, 181, 253, 0.16);
+    backdrop-filter: blur(14px);
+}
+
+.page-hero-aside p {
+    margin: 0;
+    color: var(--text-secondary);
+    line-height: 1.75;
+}
+
+.page-hero-aside strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+    gap: 1.5rem;
+}
+
+.section-card,
+.spotlight-card,
+.summary-card {
+    border-radius: 28px;
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.78), rgba(30, 41, 59, 0.72));
+    border: 1px solid rgba(148, 163, 184, 0.14);
+    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.24);
+    backdrop-filter: blur(18px);
+}
+
+.quote-line {
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+    font-style: italic;
+}
+
+.pill-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 1.25rem 0 1.5rem;
+}
+
+.info-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.55rem 0.9rem;
+    border-radius: 999px;
+    background: rgba(139, 92, 246, 0.12);
+    border: 1px solid rgba(196, 181, 253, 0.18);
+    color: var(--primary-light);
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.focus-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.focus-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 1rem;
+    border-radius: 20px;
+    background: rgba(15, 23, 42, 0.48);
+    border: 1px solid rgba(148, 163, 184, 0.14);
+    backdrop-filter: blur(12px);
+}
+
+.focus-item i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 14px;
+    background: rgba(56, 189, 248, 0.12);
+    color: var(--secondary-color);
+}
+
+.focus-item h6,
+.skill-group h6,
+.timeline-item h6 {
+    margin: 0 0 0.4rem;
+    color: var(--text-primary);
+}
+
+.focus-item p,
+.timeline-item p {
+    margin: 0;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.skill-groups {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-group {
+    padding: 1.25rem;
+    border-radius: 20px;
+    background: rgba(15, 23, 42, 0.42);
+    border: 1px solid rgba(148, 163, 184, 0.12);
+    backdrop-filter: blur(10px);
+}
+
 .tech-list {
     list-style: none;
     padding: 0;
@@ -6,13 +149,14 @@
 }
 
 .tech-list li {
-    padding: 0.75rem 0;
-    border-bottom: 1px solid var(--border-color);
+    padding: 0.85rem 0;
+    border-bottom: 1px solid rgba(48, 54, 61, 0.8);
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     font-family: 'Fira Code', monospace;
     color: var(--text-secondary);
     transition: var(--transition);
+    line-height: 1.7;
 }
 
 .tech-list li:last-child {
@@ -23,18 +167,17 @@
     content: '[✓]';
     display: inline-block;
     width: 40px;
-    color: var(--primary-color);
+    color: var(--primary-light);
     text-align: center;
     margin-right: 1rem;
     font-weight: bold;
     flex-shrink: 0;
-    text-shadow: 0 0 5px rgba(0, 255, 65, 0.5);
+    text-shadow: none;
 }
 
 .tech-list li:hover {
-    color: var(--primary-color);
+    color: var(--text-primary);
     padding-left: 0.5rem;
-    border-left: 2px solid var(--primary-color);
 }
 
 .tech-list strong {
@@ -43,15 +186,74 @@
     text-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
 }
 
-/* Card content improvements for about page */
-.about .card-content p {
-    margin-bottom: 1.25rem;
-    font-family: 'Fira Code', monospace;
-    color: var(--text-secondary);
+.compact-list li {
+    padding: 0.7rem 0;
 }
 
-.about .card-content p:last-child {
-    margin-bottom: 0;
+.timeline-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.timeline-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(48, 54, 61, 0.8);
+}
+
+.timeline-item:last-child {
+    border-bottom: none;
+}
+
+.timeline-dot {
+    width: 0.8rem;
+    height: 0.8rem;
+    margin-top: 0.45rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    box-shadow: 0 0 16px rgba(56, 189, 248, 0.28);
+    flex-shrink: 0;
+}
+
+@media (max-width: 992px) {
+    .page-hero,
+    .about-grid,
+    .skill-groups {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2.4rem;
+    }
+
+    .focus-item,
+    .skill-group {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .pill-row {
+        gap: 0.5rem;
+    }
+
+    .info-pill {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .tech-list li::before {
+        width: 32px;
+        margin-right: 0.75rem;
+    }
 }
 
 /* Made with Bob */

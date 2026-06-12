@@ -40,8 +40,8 @@
   <nav>
     <div class="nav-wrapper">
       <a href="/" class="brand-logo"><div class="nsphub-logo">nsphub</div></a>
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger" aria-label="Open navigation menu"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down nav-links">
         <li><a href="/">Home</a></li>
         <li><a href="/article">Articles</a></li>
         <li><a href="/about">About</a></li>
@@ -57,37 +57,87 @@
   </ul>
 
  <main>
-  <div class="container">
- <div class="row">
-  <h4>Get in Touch</h4>
+  <div class="container page-shell">
+ <section class="page-hero">
+  <p class="section-kicker">Contact</p>
+  <h1 class="page-title">Let’s talk about backend systems, platform engineering, or interesting ideas.</h1>
+  <p class="page-intro">
+   Reach out for collaborations, engineering conversations, writing opportunities, or just to say hello.
+  </p>
+ </section>
+
+ <section class="contact-layout">
   <div class="card contact-card">
    <div class="card-title">
     Nishanth Shetty
    </div>
    <hr />
    <div class="card-content">
-    <p>Feel free to reach out for collaborations, questions, or just to say hello!</p>
+    <p class="contact-copy">Best way to reach me is through email or LinkedIn. I’m always happy to connect with engineers, founders, and teams working on meaningful systems problems.</p>
     <div class="contact-links">
      <a href="mailto:nishanthspshetty@gmail.com" class="contact-link">
-      <i class="material-icons">email</i>
-      <span>nishanthspshetty@gmail.com</span>
+      <div class="contact-link-icon">
+       <i class="material-icons">email</i>
+      </div>
+      <div class="contact-link-body">
+       <strong>Email</strong>
+       <span>nishanthspshetty@gmail.com</span>
+      </div>
      </a>
      <a href="https://www.linkedin.com/in/nishanthspshetty" target="_blank" rel="noopener noreferrer" class="contact-link">
-      <i class="material-icons">work</i>
-      <span>LinkedIn Profile</span>
+      <div class="contact-link-icon">
+       <i class="material-icons">work</i>
+      </div>
+      <div class="contact-link-body">
+       <strong>LinkedIn</strong>
+       <span>Professional profile</span>
+      </div>
      </a>
      <a href="https://github.com/NishanthSpShetty" target="_blank" rel="noopener noreferrer" class="contact-link">
-      <i class="material-icons">code</i>
-      <span>GitHub Profile</span>
+      <div class="contact-link-icon">
+       <i class="material-icons">code</i>
+      </div>
+      <div class="contact-link-body">
+       <strong>GitHub</strong>
+       <span>Projects and experiments</span>
+      </div>
      </a>
      <a href="https://medium.com/@nishanthspshetty" target="_blank" rel="noopener noreferrer" class="contact-link">
-      <i class="material-icons">article</i>
-      <span>Medium Blog</span>
+      <div class="contact-link-icon">
+       <i class="material-icons">article</i>
+      </div>
+      <div class="contact-link-body">
+       <strong>Medium</strong>
+       <span>Technical writing and notes</span>
+      </div>
      </a>
     </div>
    </div>
   </div>
- </div>
+
+  <aside class="card availability-card">
+   <div class="card-title">
+    Availability
+   </div>
+   <hr />
+   <div class="card-content">
+    <div class="availability-list">
+     <div class="availability-item">
+      <span class="timeline-dot"></span>
+      <p>Open to backend, platform, and systems engineering conversations.</p>
+     </div>
+     <div class="availability-item">
+      <span class="timeline-dot"></span>
+      <p>Interested in technical writing, architecture discussions, and open source collaboration.</p>
+     </div>
+     <div class="availability-item">
+      <span class="timeline-dot"></span>
+      <p>Usually responds fastest through email for direct opportunities.</p>
+     </div>
+    </div>
+   </div>
+  </aside>
+ </section>
 </div>
  </main>
 
@@ -99,6 +149,10 @@
         <p class="footer-description">
           Software engineer passionate about systems programming, distributed systems, and building robust applications.
         </p>
+        <div class="footer-status">
+          <span class="status-dot"></span>
+          Open to backend, platform, and systems engineering conversations
+        </div>
       </div>
       <div class="col l4 offset-l2 s12">
         <h5>Connect</h5>
